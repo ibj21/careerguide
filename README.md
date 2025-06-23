@@ -38,6 +38,35 @@ CareerGuide is a full-stack web application designed to help students and young 
 - JWT Authentication  
 - Git & GitHub  
 ---
+## 🖼️ Screenshots
+
+### 🏠 Home Page  
+![Home Page](./screenshot/login.png)
+
+---
+
+### 👤 Profile Page  
+![Profile Page](./screenshot/profile.png)
+
+---
+
+### 📝 Quiz Page  
+![Quiz Page](./screenshot/quiz.png)
+
+---
+
+### 🎯 Result Page  
+![Result Page](./screenshot/result.png)
+
+---
+
+### 🤖 Chatbot Page  
+![Chatbot Page](./screenshot/chatbot.png)
+
+---
+
+### 🛣️ Career Path Page  
+![Career Path Page](./screenshot/path.png)
 
 ## 📦 Installation
 
