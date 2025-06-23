@@ -29,6 +29,11 @@ CareerGuide is a full-stack web application designed to help students and young 
 - Python  
 - Scikit-learn / Pandas / Numpy  
 
+
+**AI Chatbot**  
+- Groq API (running Mistral or LLaMA model)  
+- Natural Language Processing (NLP)
+
 **Other Tools**:  
 - JWT Authentication  
 - Git & GitHub  
