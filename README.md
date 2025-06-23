@@ -66,7 +66,7 @@ CareerGuide is a full-stack web application designed to help students and young 
 ---
 
 ### 🛣️ Career Path Page  
-![Career Path Page](./screenshot/path.png)
+![Career Path Page](./screenshot/train.png)
 
 ## 📦 Installation
 
