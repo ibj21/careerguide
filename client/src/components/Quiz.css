@@ -1,3 +1,13 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #ede0c7; /* or your preferred color */
+  margin: 0;
+  font-family: sans-serif;
+}
+
 p {
   font-size: 18px;
   font-weight: 600;
@@ -25,7 +35,7 @@ label:hover {
 
 input[type="radio"] {
   margin-right: 10px;
-  accent-color: #8d6e63;
+  accent-color: #e4cac1;
 }
 
 .submitbtn{
@@ -53,7 +63,7 @@ input[type="radio"] {
   padding: 30px;
   max-width: 600px;
   width: 90%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(231, 187, 187, 0.74);
   text-align: center;
 }
 
