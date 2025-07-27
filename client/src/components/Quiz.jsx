@@ -6,7 +6,7 @@ import './Quiz.css';
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState({});
-  const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -14,10 +14,13 @@ const Quiz = () => {
       try {
         const res = await axios.get('http://localhost:5000/api/quiz/questions');
         setQuestions(res.data);
+        setLoading(false);
       } catch (err) {
-        console.error(err);
+        console.error('Error fetching questions:', err);
+        setLoading(false);
       }
     };
+
     fetchQuestions();
   }, []);
 
@@ -53,37 +56,24 @@ const Quiz = () => {
         }
       );
 
-      setResult(res.data);
-
-      // Automatically redirect to profile after 3 seconds
-      setTimeout(() => {
-        navigate('/profile');
-      }, 3000);
+      // Navigate to result page with result data
+      navigate('/result', { state: { result: res.data } });
 
     } catch (err) {
-      console.error(err);
-      alert('Error submitting quiz');
+      console.error('Error submitting quiz:', err);
+      alert('Something went wrong while submitting the quiz.');
     }
   };
 
-  if (result) {
-    return (
-      <div className="container">
-        <div className="result">
-          <h2>Your Career Guidance Result</h2>
-          <p>{result.message}</p>
-          <p>Redirecting to profile...</p>
-          <button onClick={() => navigate('/profile')}>Go to Profile Now</button>
-        </div>
-      </div>
-    );
+  if (loading) {
+    return <p style={{ textAlign: 'center' }}>Loading quiz questions...</p>;
   }
 
   return (
     <form onSubmit={handleSubmit} className="quiz-form">
       {questions.map((q, idx) => (
         <div key={idx} className="question-block">
-          <p>{q.question}</p>
+          <p className="question-text">{q.question}</p>
           {q.options.map((option, oidx) => (
             <label key={oidx}>
               <input
