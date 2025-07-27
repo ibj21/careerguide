@@ -7,7 +7,7 @@ from sklearn.metrics import classification_report
 import joblib
 
 # Load dataset
-data = pd.read_csv('structured_career_data.csv')
+data = pd.read_csv('synthetic_career_quiz.csv')
 
 # Separate features and labels
 X = data.drop('Career', axis=1)
